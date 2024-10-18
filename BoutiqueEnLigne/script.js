@@ -18,13 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             
-                produitDiv.querySelector('img').addEventListener('click', () => afficherDetailsProduit(produitDiv));
+                //produitDiv.querySelector('img').addEventListener('click', () => afficherDetailsProduit(produitDiv));
                 produitsContainer.appendChild(produitDiv);
-                total += item.prix * item.quantite;
+                //total += item.prix * item.quantite;
             });
-            document.getElementById('total').textContent = total.toFixed(2);
-            afficherTotal();
+           // document.getElementById('total').textContent = total.toFixed(2);
+            
         });
+
+        function afficherDetailsProduit(imageElement) {
+            const produitElement = imageElement.parentElement;
+            const details = produitElement.querySelector('.details');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
 
         function afficherNbArticles() {
             const nbArticles = panier.reduce((acc, item) => acc + item.quantite, 0);
@@ -37,7 +43,8 @@ function afficherDetailsProduit(produitElement) {
     details.style.display = details.style.display === 'block' ? 'none' : 'block';
 }
 
-function ajouterAuPanier(idProduit) {
+function ajouterAuPanier(idProduit, event) {
+    event.stopPropagation()
     fetch('produits.json')
         .then(response => response.json())
         .then(data => {
@@ -51,6 +58,7 @@ function ajouterAuPanier(idProduit) {
             }
             afficherPanier();
             afficherNbArticles();
+            afficherTotal();
         });
 }
 
@@ -64,13 +72,13 @@ function afficherPanier() {
         itemDiv.innerHTML = `
             <h4>${item.nom}</h4>
             <p>Quantité: ${item.quantite}</p>
-            <p>Prix: ${item.prix * item.quantite} €</p>
+            <p>Prix: ${(item.prix * item.quantite).toFixed(2)} €</p>
         `;
         contenuPanier.appendChild(itemDiv);
         total += item.prix * item.quantite;
     });
 
-    document.getElementById('total').textContent = total;
+    document.getElementById('total').textContent = total.toFixed(2);
 }
 
 function afficherNbArticles() {
@@ -113,4 +121,3 @@ document.getElementById('formulaire-confirmation').addEventListener('submit', fu
         alert('Veuillez remplir tous les champs.');
     }
 });
-
