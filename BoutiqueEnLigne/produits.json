@@ -26,7 +26,7 @@
     },
 
     {
-        "id": 3,
+        "id": 4,
         "nom": "ProduitD",
         "description": "Chaussures.",
         "prix": 200.00,
@@ -35,7 +35,7 @@
     },
 
     {
-        "id": 3,
+        "id": 5,
         "nom": "ProduitE",
         "description": "Chaussures.",
         "prix": 300.00,
@@ -44,11 +44,38 @@
     },
 
     {
-        "id": 3,
+        "id": 6,
         "nom": "ProduitF",
         "description": "chaussures.",
         "prix": 400.00,
         "image": "produitF.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 7,
+        "nom": "ProduitG",
+        "description": "chaussures.",
+        "prix": 400.00,
+        "image": "produitG.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 8,
+        "nom": "ProduitH",
+        "description": "chaussures.",
+        "prix": 400.00,
+        "image": "produitH.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 9,
+        "nom": "ProduitI",
+        "description": "chaussures.",
+        "prix": 400.00,
+        "image": "produitI.jpg",
         "quantite": 75
     }
 
