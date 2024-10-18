@@ -72,13 +72,40 @@
                         <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
                     </div>
                 </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitG.jpg" alt="Produit G">
+                    <h3>Produit G</h3>
+                    <div class="details">
+                        <p>50.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitH.jpg" alt="Produit H">
+                    <h3>Produit H</h3>
+                    <div class="details">
+                        <p>200.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitI.jpg" alt="Produit I">
+                    <h3>Produit I</h3>
+                    <div class="details">
+                        <p>85.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="panier">
             <h2>Votre panier</h2>
             <div id="contenu-panier"></div>
-            <p>Total d'articles : <span id="nb-articles">0</span></p>
-            <p>Total à payer : <span id="total">0</span> €</p>
+            <p>Total d'articles : <span id="nb-articles">0</span>€</p>
+            <p>Total à payer : <span id="total">0</span>€</p>
             <button onclick="confirmerCommande()">Confirmer la commande</button>
         </section>
         <section id="confirmation">
@@ -106,3 +133,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
