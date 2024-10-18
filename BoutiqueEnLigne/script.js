@@ -59,7 +59,9 @@ function ajouterAuPanier(idProduit, event) {
             afficherPanier();
             afficherNbArticles();
             afficherTotal();
-        });
+        })
+    //J'ai voulu rajouter un "Error" pour tester si jamais ça plante..
+        .catch(error => console.error('Erreur lors du chargement des produits:', error));
 }
 
 function afficherPanier() {
