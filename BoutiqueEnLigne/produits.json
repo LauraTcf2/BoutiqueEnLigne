@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nom": "ProduitA",
+        "description": "Chaussures.",
+        "prix": 100.00,
+        "image": "produitB.jpg",
+        "quantite": 100
+    },
+    {
+        "id": 2,
+        "nom": "ProduitB",
+        "description": "Vetement (haut).",
+        "prix": 80.00,
+        "image": "produitB.jpg",
+        "quantite": 50
+    },
+
+    {
+        "id": 3,
+        "nom": "ProduitC",
+        "description": "Vetement (bas).",
+        "prix": 100.00,
+        "image": "produitC.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 3,
+        "nom": "ProduitD",
+        "description": "Chaussures.",
+        "prix": 200.00,
+        "image": "produitD.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 3,
+        "nom": "ProduitE",
+        "description": "Chaussures.",
+        "prix": 300.00,
+        "image": "produitE.jpg",
+        "quantite": 75
+    },
+
+    {
+        "id": 3,
+        "nom": "ProduitF",
+        "description": "chaussures.",
+        "prix": 400.00,
+        "image": "produitF.jpg",
+        "quantite": 75
+    }
+
+    
+]

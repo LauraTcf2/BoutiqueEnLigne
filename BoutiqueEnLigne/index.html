@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique en ligne</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans notre boutique en ligne</h1>
+    </header>
+    <main>
+        <section id="nouveau-contenu">
+            <h2>Nouveau Contenu</h2>
+            <p>Projet Boutique en Ligne.</p>
+        </section>
+        <section id="catalogue">
+            <h2>Catalogue de produits</h2>
+            <div id="produits">
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitA.jpg" alt="Produit A">
+                    <h3>Produit A</h3>
+                    <div class="details">
+                        <p>100.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitB.jpg" alt="Produit B">
+                    <h3>Produit B</h3>
+                    <div class="details">
+                        <p>80.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitC.jpg" alt="Produit C">
+                    <h3>Produit C</h3>
+                    <div class="details">
+                        <p>100.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitD.jpg" alt="Produit D">
+                    <h3>Produit D</h3>
+                    <div class="details">
+                        <p>200.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitE.jpg" alt="Produit E">
+                    <h3>Produit E</h3>
+                    <div class="details">
+                        <p>250.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="produit" onclick="afficherDetailsProduit(this)">
+                    <img src="./assets/image/produitF.jpg" alt="Produit F">
+                    <h3>Produit F</h3>
+                    <div class="details">
+                        <p>80.00 €</p>
+                        <p class="prix"></p>
+                        <button class="ajouter-panier" onclick="ajouterAuPanier(1)">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="panier">
+            <h2>Votre panier</h2>
+            <div id="contenu-panier"></div>
+            <p>Total d'articles : <span id="nb-articles">0</span></p>
+            <p>Total à payer : <span id="total">0</span> €</p>
+            <button onclick="confirmerCommande()">Confirmer la commande</button>
+        </section>
+        <section id="confirmation">
+            <h2>Confirmation de commande</h2>
+            <form id="formulaire-confirmation">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="adresse">Adresse:</label>
+                <input type="text" id="adresse" name="adresse" required>
+                <button type="submit">Confirmer</button>
+            </form>
+        </section>
+        <section id="utilisateurs">
+            <h2>Commentaires</h2>
+            <form id="formulaire-commentaire">
+                <label for="nom-utilisateur">Nom :</label>
+                <input type="text" id="nom-utilisateur" name="nom-utilisateur" required>
+                <label for="commentaire">Commentaire :</label>
+                <textarea id="commentaire" name="commentaire" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div id="liste-commentaires"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
